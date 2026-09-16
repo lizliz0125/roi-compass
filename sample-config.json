@@ -1,0 +1,67 @@
+{
+  "schema_version": 2,
+  "name": "虚构示例：客户关系活动（单期口径）",
+  "currency": "CNY",
+  "period_unit": "year",
+  "initial_cost": 500000,
+  "period_costs": [
+    0
+  ],
+  "discount_rate": 0.08,
+  "cost_source": "虚构演示：活动总投入50万元，全部发生在期初",
+  "cost_quality": "high",
+  "benefits": [
+    {
+      "id": "direct-savings",
+      "name": "已隔离本次贡献的直接现金节约",
+      "level": "L1",
+      "amount": 200000,
+      "start_period": 1,
+      "duration": 1,
+      "dropoff": 0,
+      "basis": "incremental",
+      "adjustments": {
+        "deadweight": 0,
+        "attribution": 0,
+        "displacement": 0
+      },
+      "adjustment_reason": "虚构：已扣自然发生及其他因素，无额外位移；不再次扣减",
+      "source": "虚构现金支出记录；与关系代理价值不重叠",
+      "overlap_group": "direct-savings",
+      "evidence": {
+        "design": "quasi",
+        "data_quality": "high",
+        "valuation_quality": "high",
+        "note": "虚构：匹配对照估计；真实项目需核查对照可比性和同期干预"
+      }
+    },
+    {
+      "id": "relationship-proxy",
+      "name": "关系改善的代理价值",
+      "level": "L2",
+      "amount": 900000,
+      "start_period": 1,
+      "duration": 1,
+      "dropoff": 0,
+      "basis": "gross",
+      "adjustments": {
+        "deadweight": 0.3,
+        "attribution": 0.25,
+        "displacement": 0.1
+      },
+      "adjustment_reason": "演示假设：自然发生30%，剩余价值他方贡献25%，再扣位移10%；并非实证参数",
+      "source": "纯虚构代理估值，未计入直接现金节约；不能作为真实价格参照",
+      "overlap_group": "relationship-value",
+      "evidence": {
+        "design": "quasi",
+        "data_quality": "medium",
+        "valuation_quality": "low",
+        "note": "有准实验设计，但代理单价仅为演示假设，因此证据较弱"
+      }
+    }
+  ],
+  "l3_intangibles": [
+    "战略信任提升（不货币化）",
+    "长期合作意向（不货币化）"
+  ]
+}
